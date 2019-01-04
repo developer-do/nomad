@@ -1,16 +1,16 @@
-body{
-  background-color: lightseagreen;
-}
-
 .btn {
   cursor: pointer;
 }
 
-h1 {
-  color: rgb(52, 73, 94);
-  transition: color .5s ease-in-out;
+body {
+  color: #34495e;
 }
 
-.clicked {
-  color: #7f8c8d;
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
 }
