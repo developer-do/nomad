@@ -4,12 +4,19 @@ const toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
+
 
 function deleteToDo(event){
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li);
+  const cleanToDos = toDos.filter(function (toDo) {
+    console.log(toDo.id, parseInt(li.id));
+    return toDo.id !== parseInt(li.id);
+  });
+  toDos = cleanToDos;
+  saveToDos();
 }
 
 function saveToDos() {
